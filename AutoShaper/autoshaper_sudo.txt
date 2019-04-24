@@ -1,0 +1,25 @@
+get device IP (from user)
+
+observe traffic rate from device while user interacts with it and find 50th percentile and max traffic rate
+implement traffic shaper with limit at 50th percentile
+
+last_usable_limit = max traffic rate
+
+ask user if device is still usable
+if yes:
+    averager = 0
+    last_usable_limit = current limit
+if no:
+    averager = max traffic rate
+
+loop until absolute value of averager - current limit <= 1:
+    old_limit = current traffic shaping limit
+    set new limit at halfway between averager and current traffic shaping limit
+    ask user if still usable
+    if yes:
+        averager = 0
+        last_usable_limit = current limit
+    if no:
+        averager = old_limit;
+
+once loop ends the value of last_usable_limit is the optimal traffic shaping limit
