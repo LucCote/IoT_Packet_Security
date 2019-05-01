@@ -7,4 +7,4 @@ This project uses a [Raspberry Pi acess point](https://thepi.io/how-to-use-your-
 [Wireshark](https://www.wireshark.org/) and [wondershaper](https://www.tecmint.com/wondershaper-limit-network-bandwidth-in-linux/) were used to monitor the device traffic and set traffic shaping limits.
 
 # Usage
-After capturing the packets from your IoT Device using wireshark, input the correct fields into the 
+After capturing the packets from your IoT Device using wireshark, input the correct fields into the parser.py file to allow it to sucessfully look through the pcap files, then run and view your traffic data graph
